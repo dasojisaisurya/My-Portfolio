@@ -1,0 +1,590 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f6f6f2;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Header */
+header {
+    background: #000;
+    color: #006d5b;
+    padding: 20px 10px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #f6f8f8;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #fafafa;
+    border: 1px solid  #006d5b;
+    box-shadow: #162d08;
+    background-color:  #006d5b;
+    color: #000;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+/* Profile Section */
+#profile {
+    background-color: #1e1e1e;
+    color: white;
+    padding: 100px;
+    opacity: 0;
+    animation: fadeIn 1s forwards; /* Fade-in animation */
+    background-size: cover;
+}
+.profile-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+}
+
+.profile-img {
+    width: 270px;
+    height: 270px;
+    border-radius: 50%;
+    padding-bottom: 20px;
+}
+
+
+.intro p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    padding: 10px 50px;
+    background-color: #006d5b;
+    border: 10px solid teal;
+    border-radius: 10px;
+    
+
+}
+
+/* About Section */
+#about {
+    padding: 160px;
+    background-color: #006d5b;
+    color: #333;
+    opacity: 0;
+    animation: fadeIn 1s 0.5s forwards; /* Fade-in animation with delay */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.about-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 60px;
+    margin-bottom: 40px;
+}
+
+#about h2 {
+    font-size: 35px;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+#about p {
+    font-size: 20px;
+    
+    color: #000;
+}
+.social-links{
+    display: flex;
+    padding: 0 30px;
+    justify-content: center;
+    align-items: center;
+
+}
+.social-icon{
+    margin: 20px;
+}
+.social-icon-img{
+    width: 40px;
+    height: auto;
+    text-decoration: none;
+    color: #1e1e1e;
+}
+.resume-btn a{
+    text-decoration: none;
+    color: white;
+    padding: 20px 40px;
+}
+
+/* Education Section */
+#education {
+    padding: 200px;
+    background-color: #c5bfbf;
+    opacity: 0;
+    animation: fadeIn 1s 1s forwards; /* Fade-in animation with delay */
+}
+
+.education {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: #000;
+    gap: 20px;
+}
+
+.job {
+    background-color: #006d5b;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.job h3 {
+    font-size: 1.5rem;
+}
+
+.job p {
+    font-size: 1rem;
+}
+
+/* Projects Section */
+#projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 200px 100px;
+    background-color: #000;
+ 
+    color: rgb(203, 201, 201);
+    font-style: italic;
+    opacity: 0;
+    animation: fadeIn 1s 1.5s forwards; /* Fade-in animation with delay */
+}
+.projects-heading{
+    margin-bottom: 20px;
+}
+.projects {
+    margin-top: 20px;
+    display: flex;
+    gap: 50px;
+}
+
+.project {
+    background-color: #f0ecec;
+    color: #000;
+    padding: 20px;
+    border-radius: 8px;
+    width: 70%;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(50px); /* Initially hidden */
+    animation: slideUp 1s forwards; /* Slide-up animation */
+    animation-delay: 2s; /* Delay for staggered animations */
+}
+.projects-heading{
+    margin-bottom: 10px;
+}
+.project-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.project:hover {
+    transform: scale(1.05);
+    background-color: #006d5b;
+}
+
+/* Contact Section */
+#contact {
+    padding: 190px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #5e5b5b;
+    color: white;
+    opacity: 0;
+    animation: fadeIn 1s 2s forwards; /* Fade-in animation with delay */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#contact-form{
+    width: 60%;
+}
+
+input,
+textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #cb8759;
+    color: rgb(248, 242, 242);
+    border: none;
+    border-radius: 50px;
+    padding: 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #000;
+}
+
+/* Footer */
+footer {
+    background-color:  #006d5b;
+    color: #000;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@media(max-width:700px){
+    header {
+        padding: 20px 0 ;
+        width: 100%;
+    }
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 0 45px;
+    }
+    .logo{
+        font-size: 19px; 
+    }
+    .nav-links a{
+        font-size: 16px;
+    }
+    #profile { 
+        height: 650px;
+        align-items: center; 
+        padding: 0;
+    }
+    .profile-info{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 80px;
+        height: 80%;
+    }
+    .profile-img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+    }
+    .intro p {
+        font-size: 1rem;
+        margin-top: 10px;
+        padding: 0 40px;
+        line-height: 20px;
+    }
+    #about {
+        padding: 60px;
+        height: 100%;
+    }
+    #projects{
+        padding: 150px 0;
+    }
+    .projects {
+            display: flex;
+            gap: 50px;
+            padding: 10px;     
+    }
+    .project{
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    #education {
+        padding: 100px;
+    }
+    #contact {
+        padding: 200px 100px;
+        height: 100%;
+    }
+    #contact-form{
+        width: 90%;
+    }
+}
+
+@media(max-width:600px){
+    .navbar{
+        padding: 0 15px;
+        align-items: center;
+    }
+    .logo{
+        font-size: 17px; 
+    }
+    .nav-links a{
+        font-size: 14px;
+    }
+    #about {
+        padding: 50px 0;
+    }
+    .about-content{
+        padding: 0 60px;
+    }
+    
+    #about h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        color: #000;
+    }
+    
+    #about p {
+        font-size: 1rem;
+        line-height: 1.6;
+        color: #000;
+    }
+    #projects{
+        padding: 150px 0;
+    }
+    .projects {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+            gap: 5px;     
+    }
+    .project{
+        width: 30%;
+        max-height: 270px;
+        padding: 10px 0;
+    }
+    .project>a>img{
+        width: 90%;
+    }
+}
+
+@media(max-width:483px){
+    .navbar{
+        width: 100%;
+        padding: 0 10px;
+        align-items: center;
+        flex-direction: column;
+    }
+    .logo{
+        font-size: 15px; 
+    }
+    .nav-links {
+        gap: 10px;
+    }
+    .nav-links a{
+        font-size: 14px;
+    }
+    #profile { 
+       height: 100%;
+    }
+    .profile-info{
+        display: flex;
+        flex-direction: column;
+        padding-top: 30px;
+        justify-content: center;
+    }
+    .profile-img {
+        width: 150px;
+        height: 150px;
+    }
+    .intro{
+        display: flex;
+        justify-content: center;
+    }
+    .intro p {
+        font-size: 0.8rem;
+        margin-top: 8px;
+        padding: 0;
+        line-height: 15px;
+        width: 90%;
+    }  
+    #about {
+        height: 100%;
+        padding: 40px 30px;
+    }
+    .about-content{
+        padding: 0;
+    }
+    #about h2 {
+        font-size: 1.5rem;
+    }
+    
+    #about p {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+    .social-links{
+        display: flex;
+        padding: 20px 60px;
+        justify-content: center;
+        align-items: center;
+    }
+    .social-icon{
+        margin: 0 10px;
+    }
+    .social-icon-img{
+        width: 40px;
+        height: auto;
+    }
+    .resume-btn{
+        padding: 10px 5px;
+        border-radius: 5px;
+    }
+    .resume-btn a{
+        font-size: 14px;
+    }
+    /* .resume-btn a{
+        text-decoration: none;
+        color: white;
+    } */
+    #education {
+        padding: 30px 20px;
+        height: 100%;
+    }
+    .education-heading{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .education {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        color: #000;
+        gap: 10px;
+    }
+    .job {
+        padding: 20px 15px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .job h3 {
+        font-size: 1rem;
+    }
+    
+    .job p {
+        font-size: 0.8rem;
+    }
+    #projects{
+        padding: 40px 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .projects-heading{
+        font-size: 20px;
+    }
+    .projects {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px;
+            gap: 10px;  
+    }
+    .project{
+        padding: 8px 0;
+        width: 70%;
+        border-radius: 5px;
+
+    }
+    .project>a>img{
+        width: 90%;
+        height: 90%;
+    }
+    .project>h4{
+        font-size: 12px;
+    }
+    #contact {
+        padding: 40px 10px;
+        justify-content: center;
+    }
+    form {
+        gap: 20px;
+    }
+    #contact{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    #contact-form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 80%;  
+    }
+    input,
+    textarea {
+        font-size: 0.8rem;
+        width: 100%;
+    }
+    
+    .contact-btn {
+        border-radius: 20px;
+        padding: 8px 40px;
+        font-size: 16px;
+    }
+    
+   .contact-btn:hover {
+        background-color: #000;
+    } 
+    footer {
+        text-align: center;
+        padding: 10px 0;
+    }
+    footer p{
+        font-size: 12px;
+    }
+}
